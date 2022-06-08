@@ -1,0 +1,35 @@
+<div class="container-fluid p-5 bg-dark min-vh-100">
+  <div class="row bg-light card-header d-flex justify-content-center">
+    <div class="col-12">
+      <img class="w-50" [src]="company.refs.logo_image ? company.refs.logo_image : ''">
+    </div>
+  </div>
+  <div class="row card-body bg-light">
+    <div class="col-12 bg-light px-5">
+      <div>
+        <h3><strong>{{ company.name  }} </strong></h3>
+        <h6 class="mb-3" *ngFor="let loc of company.locations">
+          Location: {{ loc.name  }}
+        </h6>
+        <p>Type: {{ company.model_type }}</p>
+        <p>Size: {{ company.size.name }}</p>
+      </div>
+      <label>Industries : </label>
+      <ul>
+        <li *ngFor="let item of company.industries">
+          {{ item.name  }}
+        </li>
+      </ul>
+      <div>
+        <h5>Description:</h5>
+        <p>{{ company.description }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="pt-5 ">
+      <button type="button" class="btn btn-lg btn-light mr-2" [routerLink]="['']">Home</button>
+      <button type="button" class="btn btn-lg btn-light ml-2" [routerLink]="['/job-info']">Close</button>
+    </div>
+  </div>
+</div>

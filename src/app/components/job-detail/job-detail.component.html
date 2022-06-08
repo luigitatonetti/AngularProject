@@ -1,0 +1,17 @@
+<div class="container-fluid p-5 bg-dark">
+  <div class="card-header bg-light text-center">
+    <h3 class="card-title display-4">{{job.name ? job.name : "Unknown"}}</h3>
+  </div>
+  <div class="row"></div>
+  <div class="card-body bg-light px-5">
+    <h3 class="card-text">{{job.company.name ? job.company.name : "Unknown"}} - {{job.locations[0] ? job.locations[0].name : "Unknown"}}</h3>
+    <p class="card-text">{{job.levels[0] ? job.levels[0].name : "Unknown"}} - {{job.publication_date ? job.publication_date : "Unknown"}}</p>
+    <button type="button" class="btn btn-sm btn-secondary" [routerLink]="['/company-info']">Company info</button>
+  </div>
+  <div class="card-body bg-light px-5">
+    <div [innerHTML]="job.contents"></div>
+  </div>
+  <div class="pt-5 d-flex justify-content-center">
+    <button type="button" class="btn btn-lg btn-light" [routerLink]="['']">Home</button>
+  </div>
+</div>
