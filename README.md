@@ -1,8 +1,10 @@
 # JobSearchApp
 
+This application allows you to search for job vacancies as a software engineer, with the ability to filter vacancies based on experience level.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
-# Link
+## Link
 [JobSearchApp](https://job-search-app-61863.web.app)
 
 ## Development server
